@@ -6,7 +6,7 @@ class Node {
   }
 }
 
-class sll {
+class SLL {
   constructor() {
     this.head = null;
     this.tail = null;
