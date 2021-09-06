@@ -42,6 +42,7 @@ class SLL {
     }
     return current;
   }
+  
   shift() {
     if (!this.head) return undefined;
     var current = this.head;
