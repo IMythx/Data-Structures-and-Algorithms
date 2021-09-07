@@ -8,7 +8,7 @@ class Node {
   }
 }
 
-class BTS {
+class BinarySearchTree {
   constructor() {
     this.root = null;
   }
