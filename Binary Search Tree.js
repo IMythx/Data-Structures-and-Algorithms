@@ -54,4 +54,41 @@ class BinarySearchTree {
       return false;
     }
   }
+  DFSPreOrder() {
+    let result = [];
+
+    const Traverse = function (node) {
+      result.push(node.value);
+      if (node.left) Traverse(node.left);
+      if (node.right) Traverse(node.right);
+    };
+    Traverse(this.root);
+    return result;
+  }
+  DFSPostOrder() {
+    let result = [];
+
+    const Traverse = function (node) {
+      if (node.left) Traverse(node.left);
+
+      if (node.right) Traverse(node.right);
+
+      result.push(node.value);
+    };
+    Traverse(this.root);
+    return result;
+  }
+  DFSInOrder() {
+    let result = [];
+
+    const Traverse = function (node) {
+      if (node.left) Traverse(node.left);
+
+      result.push(node.value);
+
+      if (node.right) Traverse(node.right);
+    };
+    Traverse(this.root);
+    return result;
+  }
 }
