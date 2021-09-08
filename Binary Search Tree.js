@@ -54,6 +54,19 @@ class BinarySearchTree {
       return false;
     }
   }
+  BFS() {
+    let queue = [this.root];
+    let result = [];
+    while (queue.length) {
+      let current = queue[0];
+      result.push(queue.shift().value);
+
+      if (current.left) queue.push(current.left);
+
+      if (current.right) queue.push(current.right);
+    }
+    return result;
+  }
   DFSPreOrder() {
     let result = [];
 
