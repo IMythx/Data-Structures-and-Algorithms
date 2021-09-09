@@ -30,9 +30,7 @@ class MaxBinaryHeap {
       }
     }
   }
-
   extractMax() {
-    let removed = this.values[0];
     this.values[0] = this.values.pop();
     let newEle = this.values[0];
     let idx = 0;
@@ -57,6 +55,10 @@ class MaxBinaryHeap {
         this.values[idx] = this.values[leftIdx];
         this.values[leftIdx] = newEle;
         idx = leftIdx;
+      } else if (newEle < this.values[rightIdx]) {
+        this.values[idx] = this.values[rightIdx];
+        this.values[rightIdx] = newEle;
+        idx = rightIdx;
       } else {
         swaped = false;
       }
