@@ -1,2 +1,2 @@
 # Data-Structure
-Some Data Structure implementation in javascript
+Some Data Structures and Algorithms implementation in javascript
